@@ -9,10 +9,8 @@ module.exports = async (_id, daka_day) => {
     // const getUser = await http.POST('https://a.welife001.com/getUser', { imprint: conf.openId });
     // const config = await http.GET('https://a.welife001.com/back/configuration/json?type=1&appkey=wx23d8d7ea22039466', { imprint: conf.openId });
     const getParent = await http.GET(`https://a.welife001.com/info/getParent?type=-1&members=${conf.memberId}&page=0&size=10&date=-1&hasMore=true`, { imprint: conf.openId });
-    // params = { "member_ids": conf.memberId };
-    // const getClassByMemberId = await http.POST('https://a.welife001.com/getClassByMemberId', { imprint: conf.openId }, params);
-    // params = { "identity": [2, 3], "platform": "mp" };
-    // const match = await http.POST('https://a.welife001.com/applet/resource/match', { imprint: conf.openId }, params);
+    // const getClassByMemberId = await http.POST('https://a.welife001.com/getClassByMemberId', { imprint: conf.openId }, { "member_ids": conf.memberId });
+    // const match = await http.POST('https://a.welife001.com/applet/resource/match', { imprint: conf.openId }, { "identity": [2, 3], "platform": "mp" });
     const datas = getParent.body.data;
     let cid;
     for (let i = 0; i < datas.length; ++i) {
