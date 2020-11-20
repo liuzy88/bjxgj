@@ -18,5 +18,5 @@
 
 #### 打赏
 
-![alipay](pay/alipay.jpeg)
-![weixin](pay/weixin.jpeg)
+![alipay](pay/alipay.png)
+![weixin](pay/weixin.png)
