@@ -3,8 +3,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
@@ -34,7 +34,10 @@ public class Main {
                 System.out.println("src error must 750x1334 !");
             }
 
-            Date d = new Date();
+            Calendar calendar = Calendar.getInstance();
+            calendar.add(Calendar.MINUTE, -3);
+            calendar.add(Calendar.SECOND, (int) (Math.random() * (100 - 30 + 1) + 30) * -1);
+            Date d = calendar.getTime();
             String time = new SimpleDateFormat("HH:mm").format(d);
             String date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d);
             BufferedImage bi = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
@@ -61,6 +64,7 @@ public class Main {
             e.printStackTrace();
         }
     }
+
     public static void loadFont() {
         try {
             Font msyh = Font.createFont(Font.TRUETYPE_FONT, new File("msyh.ttc"));

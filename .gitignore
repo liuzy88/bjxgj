@@ -1,9 +1,8 @@
 node_modules
 logs
 .DS_Store
-.idea
 *.class
 *.log
-conf.js
 img/*/
 fiddler
+conf.js
