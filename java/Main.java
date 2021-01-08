@@ -46,17 +46,17 @@ public class Main {
 
             g.setColor(new Color(255, 255, 255));
             g.fillRect(338, 8, 74, 26);
-            g.fillRect(272, 514, 320, 40);
+            g.fillRect(287, 613, 282, 36);
 
             g.setColor(new Color(0, 0, 0));
-            g.setFont(new Font("Microsoft Yahei UI", Font.BOLD, 24));
+            g.setFont(new Font("Microsoft Yahei", Font.BOLD, 24));
             g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
             g.drawString(time, 340, 30);
 
             g.setColor(new Color(155, 155, 155));
-            g.setFont(new Font("Microsoft Yahei UI", Font.PLAIN, 30));
+            g.setFont(new Font("微软雅黑 Light", Font.BOLD, 26));
             g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
-            g.drawString(date, 274, 546);
+            g.drawString(date, 298, 640);
 
             g.dispose();
             ImageIO.write(bi, "png", fos);
@@ -67,7 +67,7 @@ public class Main {
 
     public static void loadFont() {
         try {
-            Font msyh = Font.createFont(Font.TRUETYPE_FONT, new File("msyh.ttc"));
+            Font msyh = Font.createFont(Font.TRUETYPE_FONT, new File("msyhl.ttc"));
             GraphicsEnvironment.getLocalGraphicsEnvironment().registerFont(msyh);
         } catch (Exception e) {
             System.out.println("load msyh.ttc font error, " + e.getMessage());
